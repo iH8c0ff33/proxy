@@ -9,8 +9,8 @@ docker create --restart=always \
   -p 443:443 \
   -v /var/certs:/var/certs \
   --name proxy \
-  --net webserver_default \
-  --net mailserver \
-  --net regapp_network \
   proxy_image
+docker network connect webserver_default proxy
+docker network connect mailserver proxy
+docker network connect regapp_network proxy
 docker start proxy
