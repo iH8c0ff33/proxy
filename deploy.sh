@@ -1,7 +1,7 @@
 #!/bin/sh
 docker rmi proxy_image
 docker build -t proxy_image /var/proxy
-docker stop proxy
+docker kill proxy
 docker rm proxy
 docker create --restart=always \
   -i -t \
