@@ -1,4 +1,3 @@
 #!/bin/sh
 git --work-tree=/var/proxy --git-dir=/var/git/proxy.git checkout -f
-cp -r /var/proxy/hooks /var/git/proxy.git
 /var/proxy/deploy.sh
