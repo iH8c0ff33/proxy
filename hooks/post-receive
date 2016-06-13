@@ -9,7 +9,7 @@ docker run --restart=always \
   -i -t -d \
   -p 80:80 \
   -p 443:443 \
-  -v /var/certs:/var/certs
+  -v /var/certs:/var/certs \
   --name proxy \
   --net webserver_default \
   --net mailserver \
