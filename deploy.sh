@@ -13,4 +13,4 @@ docker create --restart=always \
   --net mailserver \
   --net regapp_network \
   proxy_image
-docker start -d proxy
+docker start proxy
