@@ -4,7 +4,7 @@ docker build -t proxy_image /var/proxy
 docker stop proxy
 docker rm proxy
 docker create --restart=always \
-  -i -t -d \
+  -i -t \
   -p 80:80 \
   -p 443:443 \
   -v /var/certs:/var/certs \
@@ -13,4 +13,4 @@ docker create --restart=always \
   --net mailserver \
   --net regapp_network \
   proxy_image
-docker start proxy
+docker start -d proxy
