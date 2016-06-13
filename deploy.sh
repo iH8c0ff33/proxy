@@ -1,5 +1,4 @@
 #!/bin/sh
-docker rmi proxy_image
 docker build -t proxy_image /var/proxy
 docker kill proxy
 docker rm proxy
