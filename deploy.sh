@@ -1,7 +1,4 @@
 #!/bin/sh
-git --work-tree=/var/proxy --git-dir=/var/git/proxy.git checkout -f
-cp -r /var/proxy/hooks /var/git/proxy.git
-/var/proxy/deploy.sh
 docker rmi proxy_image
 docker build -t proxy_image /var/proxy
 docker stop proxy
