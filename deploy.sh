@@ -14,3 +14,4 @@ docker network connect webserver_default proxy
 docker network connect mailserver proxy
 docker network connect regapp_network proxy
 docker start proxy
+echo nothing
