@@ -10,7 +10,6 @@ docker create --restart=always \
   -v /var/regapp:/var/regapp \
   --name proxy \
   proxy_image
-docker network connect gitlab proxy
 docker network connect webserver proxy
 docker network connect mailserver proxy
 docker network connect regapp_network proxy
