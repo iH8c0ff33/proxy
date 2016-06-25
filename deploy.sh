@@ -8,9 +8,9 @@ docker create --restart=always \
   -p 443:443 \
   -v /var/certs:/var/certs \
   -v /var/regapp:/var/regapp \
-  --link=gitlab_web_1:gitlab \
   --name proxy \
   proxy_image
+docker network connect gitlab proxy
 docker network connect webserver proxy
 docker network connect mailserver proxy
 docker network connect regapp_network proxy
